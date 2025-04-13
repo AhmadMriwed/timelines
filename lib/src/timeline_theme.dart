@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'connector_theme.dart';
 import 'indicator_theme.dart';
 import 'timelines.dart';
+import 'package:collection/collection.dart';
 
 /// Applies a theme to descendant timeline widgets.
 ///
@@ -343,7 +344,7 @@ class TimelineThemeData with Diagnosticable {
       indicatorTheme,
       connectorTheme,
     ];
-    return hashList(values);
+    return ListEquality().hash(values);
   }
 
   @override
